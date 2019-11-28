@@ -13,7 +13,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #e8e6e3;
 }
 
 #nav {
@@ -27,5 +27,9 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+html, body, input, textarea, select, button {
+    background-color: #181a1b;
 }
 </style>

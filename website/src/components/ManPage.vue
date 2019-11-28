@@ -12,8 +12,8 @@ export default {
   name: 'ManPage',
   data() {
     return {
-      name: 'ls',
-      description: 'list files',
+      name: '',
+      description: '',
     };
   },
   methods: {
