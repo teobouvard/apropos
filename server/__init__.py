@@ -2,12 +2,14 @@ import json
 
 from flask import Flask
 from flask_pymongo import PyMongo
+from flask_cors import CORS
 
 app = Flask(__name__)
-app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
+CORS(app)
 
-# add mongo url to flask config, so that flask_pymongo can use it to make connection
+app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 app.config['MONGO_URI'] = 'mongodb://localhost:27017/test_database'
+
 mongo = PyMongo(app)
 
 from server import routes
