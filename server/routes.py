@@ -1,7 +1,7 @@
 from server import app
 from flask import jsonify
 
-# sanity check route
-@app.route('/ping', methods=['GET'])
-def ping_pong():
-    return jsonify('pong!')
+@app.route('/random', methods=['GET'])
+def get_random_command():
+    res = {'name':'ls', 'description':'list files'}
+    return jsonify(res)
