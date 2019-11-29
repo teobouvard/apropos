@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     getManpage() {
-      const path = 'http://localhost:5000/random';
+      const path = 'http://192.168.0.95:5000/random';
       axios.get(path)
         .then((res) => {
           this.name = res.data.name;

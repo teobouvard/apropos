@@ -1,0 +1,26 @@
+version: '3'
+services:
+  flask:
+    restart: unless-stopped
+    container_name: flask-server
+    build: ./server
+    ports: 
+      - 5000:5000
+    links:
+      - db
+  webserver:
+    container_name: webserver
+    restart: unless-stopped
+    build: ./website
+    ports:
+    - 8080:8080
+    depends_on:
+      - flask
+  db:
+    container_name: mongodb
+    restart: unless-stopped
+    image: mongo:latest
+    volumes:
+      - ./db:/data/db
+    ports:
+      - 27017:27017
