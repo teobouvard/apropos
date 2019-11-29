@@ -4,7 +4,7 @@ import os
 
 from server import app
 
-client = MongoClient('mongodb', 27017)
+client = MongoClient('localhost', 27017) #change to mongodb for container
 db = client.test_database
 
 @app.route('/', methods=['GET'])
