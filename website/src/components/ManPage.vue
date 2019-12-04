@@ -1,6 +1,8 @@
 <template>
   <div class="page">
+    <v-btn @click=getManpage()>RANDOM</v-btn>
     <h1>{{ name }}</h1>
+    <p>{{ synopsis }}</p>
     <p>{{ description }}</p>
   </div>
 </template>
@@ -14,6 +16,7 @@ export default {
     return {
       name: '',
       description: '',
+      synopsis: '',
     };
   },
   methods: {
@@ -23,6 +26,7 @@ export default {
         .then((res) => {
           this.name = res.data.name;
           this.description = res.data.description;
+          this.synopsis = res.data.synopsis;
         })
         .catch((error) => {
           // eslint-disable-next-line
@@ -38,4 +42,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+div {
+  width: 60em;
+  text-align: justify;
+  margin: auto;
+}
 </style>

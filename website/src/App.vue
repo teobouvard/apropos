@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <div id="nav">
-    </div>
-    <router-view/>
+    <v-app id="v-app">
+      <div id="nav">
+      </div>
+      <router-view/>
+    </v-app>
   </div>
 </template>
 
@@ -26,9 +28,5 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
-}
-
-html, body, input, textarea, select, button {
-    background-color: #181a1b;
 }
 </style>

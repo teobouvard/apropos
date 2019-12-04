@@ -12,5 +12,8 @@ export default {
   components: {
     ManPage,
   },
+  created() {
+    this.$vuetify.theme.dark = true;
+  },
 };
 </script>
